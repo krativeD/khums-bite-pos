@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-white;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glow-button {
+    @apply bg-primary-gold text-black font-bold py-3 px-6 rounded-xl shadow-gold-glow transition-all duration-300 hover:shadow-lg hover:scale-105;
+  }
+  
+  .card {
+    @apply bg-card rounded-xl shadow-soft border border-primary-gold/20;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
